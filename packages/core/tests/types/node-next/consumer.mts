@@ -1,4 +1,8 @@
-import { useAsync } from '@siberiacancode/reactuse'
+import { useAsync } from '@siberiacancode/reactuse';
 
-const result = useAsync(async () => ['ok'])
-export const values: string[] | undefined = result.data
+export const useConsumer = () => {
+  const result = useAsync(async () => ['ok']);
+  const values: string[] | undefined = result.data;
+
+  return values;
+};
